@@ -355,7 +355,7 @@ Um domínio bloqueado não representa necessariamente uma ameaça cibernética. 
 
 Essa implementação representa uma camada inicial de monitoramento de segurança, servindo como base para a futura integração do ambiente com um laboratório SOC.
 
-## 🔎 10. Monitoramento de logs em tempo real
+## 🔎 11. Monitoramento de logs em tempo real
 
 Além do dashboard administrativo, o Pi-hole disponibiliza ferramentas para acompanhamento das consultas diretamente pelo terminal Linux.
 
@@ -377,9 +377,9 @@ A análise desses registros pode auxiliar nas seguintes atividades:
 
 ![Monitoramento de consultas DNS](images/08-monitoramento.png)
 
-## 🛠️ 11. Troubleshooting
+## 🛠️ 12. Troubleshooting
 
-Durante a utilização do laboratório, foi identificado que o computador Windows havia deixado de encaminhar suas consultas DNS ao servidor Pi-hole após uma alteração nas configurações de rede.
+Durante a utilização do laboratório, foi identificado que o computador que eu estava utilizando para realizar os testes havia deixado de encaminhar suas consultas DNS ao servidor Pi-hole após uma alteração nas configurações de rede.
 
 ### Problema identificado
 
@@ -420,7 +420,7 @@ Após a correção, o dashboard voltou a registrar consultas e bloqueios proveni
 
 O Pi-hole não substitui soluções de firewall, antivírus, EDR ou SIEM. Sua finalidade neste laboratório é atuar como uma camada complementar de monitoramento e segurança DNS.
 
-## 💡 12. Conhecimentos desenvolvidos
+## 💡 13. Conhecimentos desenvolvidos
 
 | Área | Competências |
 |---|---|
@@ -436,7 +436,7 @@ O Pi-hole não substitui soluções de firewall, antivírus, EDR ou SIEM. Sua fi
 
 
 
-## ✅ 13. Conclusão
+## ✅ 14. Conclusão
 
 O projeto demonstrou a viabilidade de transformar um computador antigo, com apenas 2 GB de memória RAM, em um servidor dedicado à resolução DNS, filtragem de domínios e monitoramento de consultas na rede local.
 
@@ -453,7 +453,7 @@ O laboratório permanece como uma base de estudos para futuras implementações 
 
 ## 👨‍💻 Autor
 
-**Felipe Oliveira**
+**Felipe de Oliveira Albino**
 
 Profissional de Tecnologia da Informação, formado em Análise e Desenvolvimento de Sistemas, com experiência em suporte técnico, hospedagem de sites, servidores Linux e Windows e administração de DNS.
 
