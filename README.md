@@ -381,7 +381,7 @@ Durante a utilização do laboratório, foi identificado que o computador que eu
 
 ### Problema identificado
 
-Eu ( Felipe ) dono do servidor estava utilizando outro servidor DNS, fazendo com que suas consultas não fossem submetidas à filtragem do Pi-hole.
+Eu ( Felipe ) dono do servidor estava utilizando outro IP no servidor DNS, fazendo com que as consultas não fossem submetidas à filtragem do Pi-hole.
 
 ### Diagnóstico
 
