@@ -4,7 +4,6 @@
 ![Linux](https://img.shields.io/badge/Linux-Server-FCC624?logo=linux&logoColor=black)
 ![Pi-hole](https://img.shields.io/badge/Pi--hole-DNS-96060C?logo=pihole)
 ![Status](https://img.shields.io/badge/Status-Operacional-brightgreen)
-![Security](https://img.shields.io/badge/Security-DNS%20Filtering-blue)
 
 ## 📌 Sobre o projeto
 
