@@ -312,6 +312,49 @@ Entre as informações disponíveis, destacam-se:
 
 O painel permite avaliar o comportamento das consultas DNS e identificar possíveis necessidades de investigação ou ajustes nas listas de bloqueio.
 
+### 10.1. Análise de consultas DNS e domínios bloqueados
+
+Além do monitoramento pelo terminal Linux, foi utilizada a ferramenta Query Log, disponível na interface administrativa do Pi-hole, para analisar individualmente as consultas DNS realizadas pelos dispositivos da rede local.
+
+A ferramenta permite visualizar informações como:
+
+- Data e horário da consulta.
+- Endereço IP do dispositivo de origem.
+- Domínio consultado.
+- Tipo de consulta DNS.
+- Status da consulta.
+- Domínios permitidos e bloqueados.
+- Tempo de resposta do servidor DNS.
+
+#### Evidência da análise de logs DNS
+
+![Análise de logs DNS](images/09-query-log.png)
+
+### 10.2. Identificação de domínios bloqueados
+
+Através das listas de bloqueio configuradas no Pi-hole, é possível impedir a resolução de determinados domínios relacionados à publicidade, rastreamento e outras categorias indesejadas.
+
+A análise dos registros de bloqueio permite identificar quais dispositivos estão realizando essas consultas e quais domínios estão sendo filtrados.
+
+#### Evidência dos domínios bloqueados
+
+![Domínios bloqueados](images/10-dominios-bloqueados.png)
+
+### 10.3. Aplicação em operações de segurança (SOC)
+
+O monitoramento de consultas DNS possui relevância para atividades de segurança da informação, permitindo apoiar processos como:
+
+- Monitoramento de eventos de rede.
+- Triagem de atividades suspeitas.
+- Investigação de domínios potencialmente maliciosos.
+- Identificação de possíveis indicadores de comprometimento (IOCs).
+- Análise de comportamento dos dispositivos.
+- Investigação de possíveis falsos positivos.
+
+Um domínio bloqueado não representa necessariamente uma ameaça cibernética. É necessário investigar seu contexto e reputação antes de classificá-lo como malicioso.
+
+Essa implementação representa uma camada inicial de monitoramento de segurança, servindo como base para a futura integração do ambiente com um laboratório SOC.
+
 ## 🔎 10. Monitoramento de logs em tempo real
 
 Além do dashboard administrativo, o Pi-hole disponibiliza ferramentas para acompanhamento das consultas diretamente pelo terminal Linux.
@@ -340,11 +383,11 @@ Durante a utilização do laboratório, foi identificado que o computador Window
 
 ### Problema identificado
 
-O cliente estava utilizando outro servidor DNS, fazendo com que suas consultas não fossem submetidas à filtragem do Pi-hole.
+Eu ( Felipe ) dono do servidor estava utilizando outro servidor DNS, fazendo com que suas consultas não fossem submetidas à filtragem do Pi-hole.
 
 ### Diagnóstico
 
-Foram utilizadas verificações da configuração de rede e consultas DNS para identificar o comportamento do cliente.
+Foram utilizadas verificações da configuração de rede e consultas DNS para identificar o comportamento do servidor.
 
 ```cmd
 ipconfig
@@ -375,27 +418,9 @@ Após a correção, o dashboard voltou a registrar consultas e bloqueios proveni
 - Identificação de desvios de configuração.
 - Validação operacional de serviços.
 
-## 🔐 12. Aplicação em segurança da informação
-
-Embora seja frequentemente utilizado para bloqueio de publicidade, o Pi-hole também pode contribuir para atividades de segurança da informação.
-
-A filtragem DNS pode atuar como uma camada preventiva contra determinados domínios indesejados ou maliciosos, desde que estejam presentes nas listas de bloqueio configuradas.
-
-Possíveis aplicações:
-
-- Filtragem de domínios maliciosos.
-- Redução da exposição a sites de phishing.
-- Investigação de consultas DNS suspeitas.
-- Análise de registros de rede.
-- Identificação de indicadores de comprometimento (IOCs).
-- Apoio a atividades de Threat Intelligence.
-- Monitoramento de comportamentos anormais.
-
-Essas funcionalidades possuem relação com atividades realizadas por equipes de Blue Team e Security Operations Center (SOC).
-
 O Pi-hole não substitui soluções de firewall, antivírus, EDR ou SIEM. Sua finalidade neste laboratório é atuar como uma camada complementar de monitoramento e segurança DNS.
 
-## 💡 13. Conhecimentos desenvolvidos
+## 💡 12. Conhecimentos desenvolvidos
 
 | Área | Competências |
 |---|---|
@@ -409,22 +434,9 @@ O Pi-hole não substitui soluções de firewall, antivírus, EDR ou SIEM. Sua fi
 | Hardware | Reaproveitamento de recursos computacionais |
 | Documentação | Registro de procedimentos e evidências |
 
-## 📈 14. Próximas implementações
 
-Este projeto constitui a base para a expansão do laboratório doméstico de infraestrutura e segurança.
 
-As próximas implementações planejadas incluem:
-
-- [ ] Instalação e configuração do Fail2Ban.
-- [ ] Detecção de tentativas de força bruta SSH.
-- [ ] Auditoria de eventos Linux com Auditd.
-- [ ] Análise de logs de segurança.
-- [ ] Investigação de reputação de IPs e domínios.
-- [ ] Automação de tarefas com Python.
-- [ ] Desenvolvimento de um dashboard de segurança.
-- [ ] Implementação de um laboratório SOC de baixo consumo de recursos.
-
-## ✅ 15. Conclusão
+## ✅ 13. Conclusão
 
 O projeto demonstrou a viabilidade de transformar um computador antigo, com apenas 2 GB de memória RAM, em um servidor dedicado à resolução DNS, filtragem de domínios e monitoramento de consultas na rede local.
 
