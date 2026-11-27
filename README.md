@@ -1,4 +1,4 @@
-# 🛡️ Linux Server & Pi-hole | DNS Infrastructure Lab
+# 🛡️ Linux Server & Pi-hole | Filtragem e bloqueio de Domínios
 
 ![Debian](https://img.shields.io/badge/Debian-13%20Trixie-A81D33?logo=debian)
 ![Linux](https://img.shields.io/badge/Linux-Server-FCC624?logo=linux&logoColor=black)
