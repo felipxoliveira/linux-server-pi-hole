@@ -9,7 +9,7 @@
 
 Este projeto consiste na implementação de um laboratório de infraestrutura e segurança de redes em ambiente doméstico, utilizando um computador antigo transformado em um servidor Linux dedicado.
 
-A proposta foi reaproveitar um equipamento com recursos computacionais limitados, instalando o Debian GNU/Linux 13 (Trixie) e implementando uma solução de resolução DNS local, monitoramento de consultas e filtragem de domínios por meio do Pi-hole.
+A proposta foi reaproveitar um equipamento com recursos computacionais limitados, instalando o Debian GNU/Linux 13 (Trixie) e implementando uma solução de resolução DNS local, monitoramento de consultas, filtragens e bloqueio de domínios por meio do Pi-hole.
 
 O projeto foi desenvolvido com foco no aprimoramento de conhecimentos práticos em administração de sistemas Linux, redes TCP/IP, gerenciamento de serviços, análise de logs, troubleshooting e segurança da informação.
 
