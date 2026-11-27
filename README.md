@@ -50,7 +50,6 @@ A escolha de uma distribuição Linux com baixo consumo de recursos permite o re
 Para identificar os recursos disponíveis no servidor, foram definidos os seguintes comandos de diagnóstico:
 
 ```bash
-lscpu
 free -h
 df -h
 ```
